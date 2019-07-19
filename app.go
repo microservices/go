@@ -1,6 +1,7 @@
 package main
 
 import (
+    "io"
     "encoding/json"
     "fmt"
     "net/http"
@@ -22,6 +23,10 @@ func main() {
             Message: fmt.Sprintf("Hello %s", user.Name),
         }
         json.NewEncoder(w).Encode(response)
+    })
+
+    http.HandleFunc("/health", func(w http.ResponseWriter, r *http.Request) {
+        io.WriteString(w, "OK");
     })
 
     http.ListenAndServe(":8080", nil)

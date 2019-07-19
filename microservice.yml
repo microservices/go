@@ -9,6 +9,10 @@ info:
 lifecycle:
   startup:
     command: []
+health:
+  http:
+    path: /health
+    port: 8080
 actions:
   message:
     http:
