@@ -16,7 +16,7 @@ your_service message name: 'Peter'
 
 Notes
 ----
-[https://github.com/golang/go/wiki/Modules#quick-start](Enable Go Modules)
+[https://github.com/golang/go/wiki/Modules#quick-start](Go Modules)
 
 
 Test
