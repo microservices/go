@@ -4,7 +4,7 @@ ENV     GO111MODULE=on
 
 WORKDIR /microservice
 
-COPY    go.* ./
+COPY    go.* .
 RUN     go mod download
 
 COPY		app.go .
